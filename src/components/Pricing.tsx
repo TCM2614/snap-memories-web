@@ -52,10 +52,10 @@ const pricingList: PricingProps[] = [
   {
     title: "Pro",
     popular: 1,
-    price: 12,
+    price: 9.99,
     priceLabel: "one-time",
     description: "Full-featured desktop app. Pay once, own forever.",
-    buttonText: "Buy Pro — $12",
+    buttonText: "Buy Pro — £9.99",
     buttonHref: BUY_URL,
     benefitList: [
       { text: "Unlimited Downloads", included: true, highlight: true },
@@ -109,7 +109,7 @@ export const Pricing = () => {
                 ) : null}
               </CardTitle>
               <div>
-                <span className="text-3xl font-bold">${pricing.price}</span>
+                <span className="text-3xl font-bold">{pricing.price === 0 ? '£0' : `£${pricing.price}`}</span>
                 <span className="text-muted-foreground"> {pricing.priceLabel}</span>
               </div>
 

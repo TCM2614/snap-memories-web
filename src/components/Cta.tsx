@@ -23,7 +23,7 @@ export const Cta = () => {
         <div className="space-y-4 lg:col-start-2">
           <a href="#pricing">
             <Button className="w-full md:mr-4 md:w-auto">
-              Get Pro — $12
+              Get Pro — £9.99
             </Button>
           </a>
           <a href="https://github.com/snap-memories-backup/cli/releases" target="_blank" rel="noreferrer noopener">
