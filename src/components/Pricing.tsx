@@ -12,7 +12,7 @@ import { Check, X } from "lucide-react";
 
 // Lemon Squeezy checkout URL
 const BUY_URL = "https://snapmemoriesbackup.lemonsqueezy.com/buy/543cc34b-b15d-49e3-92df-94d28d401fb0";
-const DOWNLOAD_FREE_LINK = "https://github.com/TCM2614/snap-memories-web/releases/tag/v1.0.0";
+const DOWNLOAD_FREE_LINK = "/setup.exe";
 
 enum PopularPlanType {
   NO = 0,

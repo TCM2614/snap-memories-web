@@ -2,8 +2,8 @@ import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { CheckCircle, Mail, Download, Key } from "lucide-react";
 
-// GitHub Release download link
-const DOWNLOAD_LINK = "https://github.com/TCM2614/snap-memories-web/releases/tag/v1.0.0";
+// Direct download from our domain
+const DOWNLOAD_LINK = "/setup.exe";
 
 export const Success = () => {
   return (

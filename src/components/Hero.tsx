@@ -2,8 +2,8 @@ import { buttonVariants } from "./ui/button";
 import { HeroCards } from "./HeroCards";
 import { Download } from "lucide-react";
 
-// GitHub Release download link
-const DOWNLOAD_LINK = "https://github.com/TCM2614/snap-memories-web/releases/tag/v1.0.0";
+// Direct download from our domain
+const DOWNLOAD_LINK = "/setup.exe";
 
 export const Hero = () => {
   return (
