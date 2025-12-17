@@ -1,4 +1,4 @@
-import { LogoIcon } from "./Icons";
+import { Camera } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -10,85 +10,22 @@ export const Footer = () => {
           <a
             rel="noreferrer noopener"
             href="/"
-            className="font-bold text-xl flex"
+            className="font-bold text-xl flex items-center gap-2"
           >
-            <LogoIcon />
-            ShadcnUI/React
+            <Camera className="w-6 h-6 text-primary" />
+            Snap Memories
           </a>
+          <p className="text-muted-foreground mt-2">
+            Your memories deserve permanence.
+          </p>
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Follow US</h3>
+          <h3 className="font-bold text-lg">Product</h3>
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Github
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Twitter
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Dribbble
-            </a>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Platforms</h3>
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Web
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Mobile
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Desktop
-            </a>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">About</h3>
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
+              href="#features"
               className="opacity-60 hover:opacity-100"
             >
               Features
@@ -98,7 +35,7 @@ export const Footer = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="#pricing"
               className="opacity-60 hover:opacity-100"
             >
               Pricing
@@ -108,7 +45,7 @@ export const Footer = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="#faq"
               className="opacity-60 hover:opacity-100"
             >
               FAQ
@@ -117,14 +54,14 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Community</h3>
+          <h3 className="font-bold text-lg">Downloads</h3>
           <div>
             <a
               rel="noreferrer noopener"
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Youtube
+              macOS
             </a>
           </div>
 
@@ -134,7 +71,7 @@ export const Footer = () => {
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Discord
+              Windows
             </a>
           </div>
 
@@ -144,24 +81,76 @@ export const Footer = () => {
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Twitch
+              Linux
+            </a>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <h3 className="font-bold text-lg">Resources</h3>
+          <div>
+            <a
+              rel="noreferrer noopener"
+              href="https://github.com/snap-memories-backup/cli"
+              target="_blank"
+              className="opacity-60 hover:opacity-100"
+            >
+              GitHub
+            </a>
+          </div>
+
+          <div>
+            <a
+              rel="noreferrer noopener"
+              href="#"
+              className="opacity-60 hover:opacity-100"
+            >
+              Documentation
+            </a>
+          </div>
+
+          <div>
+            <a
+              rel="noreferrer noopener"
+              href="mailto:support@snapmemoriesbackup.com"
+              className="opacity-60 hover:opacity-100"
+            >
+              Support
+            </a>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <h3 className="font-bold text-lg">Legal</h3>
+          <div>
+            <a
+              rel="noreferrer noopener"
+              href="#"
+              className="opacity-60 hover:opacity-100"
+            >
+              Privacy Policy
+            </a>
+          </div>
+
+          <div>
+            <a
+              rel="noreferrer noopener"
+              href="#"
+              className="opacity-60 hover:opacity-100"
+            >
+              Terms of Service
             </a>
           </div>
         </div>
       </section>
 
       <section className="container pb-14 text-center">
-        <h3>
-          &copy; 2024 Landing page made by{" "}
-          <a
-            rel="noreferrer noopener"
-            target="_blank"
-            href="https://www.linkedin.com/in/leopoldo-miranda/"
-            className="text-primary transition-all border-primary hover:border-b-2"
-          >
-            Leo Miranda
-          </a>
+        <h3 className="text-muted-foreground">
+          Made with ❤️ for people who care about their memories.
         </h3>
+        <p className="text-sm text-muted-foreground mt-2">
+          © 2024 Snap Memories Backup. Not affiliated with Snap Inc.
+        </p>
       </section>
     </footer>
   );

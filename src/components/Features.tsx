@@ -2,51 +2,58 @@ import { Badge } from "./ui/badge";
 import {
   Card,
   CardContent,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import image from "../assets/growth.png";
-import image3 from "../assets/reflecting.png";
-import image4 from "../assets/looking-ahead.png";
+import { Map, Calendar, Shield, RotateCcw, FolderTree } from "lucide-react";
 
 interface FeatureProps {
+  icon: JSX.Element;
   title: string;
   description: string;
-  image: string;
 }
 
 const features: FeatureProps[] = [
   {
-    title: "Responsive Design",
+    icon: <Map className="w-8 h-8 text-primary" />,
+    title: "Map Your Life",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image4,
+      "Auto-generates a Google Earth heatmap of everywhere you've been. Every Snap, every location, plotted on an interactive timeline you can explore for years to come.",
   },
   {
-    title: "Intuitive user interface",
+    icon: <Calendar className="w-8 h-8 text-primary" />,
+    title: "Gallery Ready",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image3,
+      "Fixes the 'Date Taken' metadata so your photos actually sort correctly in Apple Photos, Google Photos, or any gallery app. No more jumbled timelines.",
   },
   {
-    title: "AI-Powered insights",
+    icon: <Shield className="w-8 h-8 text-primary" />,
+    title: "Privacy Focused",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image,
+      "Your data never leaves your computer. We process everything locally for maximum security. No cloud uploads, no accounts, no tracking.",
+  },
+  {
+    icon: <RotateCcw className="w-8 h-8 text-primary" />,
+    title: "Never Lose Progress",
+    description:
+      "Internet dropped? Computer crashed? No problem. Pick up exactly where you left off. Every download is tracked and resumable.",
+  },
+  {
+    icon: <FolderTree className="w-8 h-8 text-primary" />,
+    title: "Perfectly Organized",
+    description:
+      "Files are automatically sorted into folders by date: 2023/January/15/. Find any memory in seconds, even years from now.",
   },
 ];
 
 const featureList: string[] = [
-  "Dark/Light theme",
-  "Reviews",
-  "Features",
-  "Pricing",
-  "Contact form",
-  "Our team",
-  "Responsive design",
-  "Newsletter",
-  "Minimalist",
+  "EXIF Geotagging",
+  "Google Earth Export",
+  "Resume Support",
+  "Parallel Downloads",
+  "Cross-Platform",
+  "Zero Dependencies",
+  "Open Source CLI",
 ];
 
 export const Features = () => {
@@ -56,9 +63,9 @@ export const Features = () => {
       className="container py-24 sm:py-32 space-y-8"
     >
       <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-        Many{" "}
+        Everything You Need to{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Great Features
+          Save Your Memories
         </span>
       </h2>
 
@@ -76,21 +83,18 @@ export const Features = () => {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map(({ title, description, image }: FeatureProps) => (
-          <Card key={title}>
+        {features.map(({ icon, title, description }: FeatureProps) => (
+          <Card key={title} className="bg-muted/50">
             <CardHeader>
-              <CardTitle>{title}</CardTitle>
+              <div className="flex items-center gap-4">
+                {icon}
+                <CardTitle>{title}</CardTitle>
+              </div>
             </CardHeader>
 
-            <CardContent>{description}</CardContent>
-
-            <CardFooter>
-              <img
-                src={image}
-                alt="About feature"
-                className="w-[200px] lg:w-[300px] mx-auto"
-              />
-            </CardFooter>
+            <CardContent className="text-muted-foreground">
+              {description}
+            </CardContent>
           </Card>
         ))}
       </div>

@@ -1,35 +1,51 @@
-import { About } from "./components/About";
+import { useEffect, useState } from "react";
 import { Cta } from "./components/Cta";
 import { FAQ } from "./components/FAQ";
 import { Features } from "./components/Features";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
-import { HowItWorks } from "./components/HowItWorks";
 import { Navbar } from "./components/Navbar";
-import { Newsletter } from "./components/Newsletter";
 import { Pricing } from "./components/Pricing";
 import { ScrollToTop } from "./components/ScrollToTop";
-import { Services } from "./components/Services";
-import { Sponsors } from "./components/Sponsors";
-import { Team } from "./components/Team";
-import { Testimonials } from "./components/Testimonials";
+import { Success } from "./components/Success";
 import "./App.css";
 
 function App() {
+  const [isSuccessPage, setIsSuccessPage] = useState(false);
+
+  useEffect(() => {
+    // Check if we're on the success page (hash or path based)
+    const checkRoute = () => {
+      const hash = window.location.hash;
+      const path = window.location.pathname;
+      setIsSuccessPage(hash === '#success' || path === '/success');
+    };
+
+    checkRoute();
+    window.addEventListener('hashchange', checkRoute);
+    return () => window.removeEventListener('hashchange', checkRoute);
+  }, []);
+
+  // Success page layout
+  if (isSuccessPage) {
+    return (
+      <>
+        <Navbar />
+        <Success />
+        <Footer />
+        <ScrollToTop />
+      </>
+    );
+  }
+
+  // Main landing page layout
   return (
     <>
       <Navbar />
       <Hero />
-      <Sponsors />
-      <About />
-      <HowItWorks />
       <Features />
-      <Services />
-      <Cta />
-      <Testimonials />
-      <Team />
       <Pricing />
-      <Newsletter />
+      <Cta />
       <FAQ />
       <Footer />
       <ScrollToTop />

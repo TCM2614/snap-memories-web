@@ -9,28 +9,31 @@ export const Cta = () => {
       <div className="container lg:grid lg:grid-cols-2 place-items-center">
         <div className="lg:col-start-1">
           <h2 className="text-3xl md:text-4xl font-bold ">
-            All Your
+            Ready to
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
               {" "}
-              Ideas & Concepts{" "}
+              Rescue Your Memories?{" "}
             </span>
-            In One Interface
           </h2>
           <p className="text-muted-foreground text-xl mt-4 mb-8 lg:mb-0">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
-            beatae. Ipsa tempore ipsum iste quibusdam illum ducimus eos. Quasi,
-            sed!
+            Your Snapchat export expires in 72 hours. Don't let years of memories disappear.
           </p>
         </div>
 
         <div className="space-y-4 lg:col-start-2">
-          <Button className="w-full md:mr-4 md:w-auto">Request a Demo</Button>
-          <Button
-            variant="outline"
-            className="w-full md:w-auto"
-          >
-            View all features
-          </Button>
+          <a href="#pricing">
+            <Button className="w-full md:mr-4 md:w-auto">
+              Get Pro — $12
+            </Button>
+          </a>
+          <a href="https://github.com/snap-memories-backup/cli/releases" target="_blank" rel="noreferrer noopener">
+            <Button
+              variant="outline"
+              className="w-full md:w-auto"
+            >
+              Download Free CLI
+            </Button>
+          </a>
         </div>
       </div>
     </section>

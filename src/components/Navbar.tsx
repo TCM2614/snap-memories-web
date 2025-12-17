@@ -14,9 +14,8 @@ import {
 
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "./ui/button";
-import { Menu } from "lucide-react";
+import { Menu, Camera } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
-import { LogoIcon } from "./Icons";
 
 interface RouteProps {
   href: string;
@@ -27,10 +26,6 @@ const routeList: RouteProps[] = [
   {
     href: "#features",
     label: "Features",
-  },
-  {
-    href: "#testimonials",
-    label: "Testimonials",
   },
   {
     href: "#pricing",
@@ -52,10 +47,10 @@ export const Navbar = () => {
             <a
               rel="noreferrer noopener"
               href="/"
-              className="ml-2 font-bold text-xl flex"
+              className="ml-2 font-bold text-xl flex items-center gap-2"
             >
-              <LogoIcon />
-              ShadcnUI/React
+              <Camera className="w-6 h-6 text-primary" />
+              <span>Snap Memories</span>
             </a>
           </NavigationMenuItem>
 
@@ -79,7 +74,7 @@ export const Navbar = () => {
               <SheetContent side={"left"}>
                 <SheetHeader>
                   <SheetTitle className="font-bold text-xl">
-                    Shadcn/React
+                    Snap Memories
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
@@ -96,7 +91,7 @@ export const Navbar = () => {
                   ))}
                   <a
                     rel="noreferrer noopener"
-                    href="https://github.com/leoMirandaa/shadcn-landing-page.git"
+                    href="https://github.com/snap-memories-backup/cli"
                     target="_blank"
                     className={`w-[110px] border ${buttonVariants({
                       variant: "secondary",
@@ -129,7 +124,7 @@ export const Navbar = () => {
           <div className="hidden md:flex gap-2">
             <a
               rel="noreferrer noopener"
-              href="https://github.com/leoMirandaa/shadcn-landing-page.git"
+              href="https://github.com/snap-memories-backup/cli"
               target="_blank"
               className={`border ${buttonVariants({ variant: "secondary" })}`}
             >
