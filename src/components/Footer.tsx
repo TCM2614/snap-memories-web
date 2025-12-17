@@ -58,17 +58,27 @@ export const Footer = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="https://github.com/TCM2614/snap-memories-web/releases/download/v1.0.0/snap-memories-backup-macos-arm64"
               className="opacity-60 hover:opacity-100"
             >
-              macOS
+              macOS (Apple Silicon)
             </a>
           </div>
 
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="https://github.com/TCM2614/snap-memories-web/releases/download/v1.0.0/snap-memories-backup-macos-x64"
+              className="opacity-60 hover:opacity-100"
+            >
+              macOS (Intel)
+            </a>
+          </div>
+
+          <div>
+            <a
+              rel="noreferrer noopener"
+              href="https://github.com/TCM2614/snap-memories-web/releases/download/v1.0.0/snap-memories-backup-win-x64.exe"
               className="opacity-60 hover:opacity-100"
             >
               Windows
@@ -78,7 +88,7 @@ export const Footer = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="https://github.com/TCM2614/snap-memories-web/releases/download/v1.0.0/snap-memories-backup-linux-x64"
               className="opacity-60 hover:opacity-100"
             >
               Linux
@@ -91,7 +101,7 @@ export const Footer = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="https://github.com/snap-memories-backup/cli"
+              href="https://github.com/TCM2614/snap-memories-web/releases"
               target="_blank"
               className="opacity-60 hover:opacity-100"
             >

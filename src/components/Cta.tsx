@@ -26,7 +26,7 @@ export const Cta = () => {
               Get Pro — £9.99
             </Button>
           </a>
-          <a href="https://github.com/snap-memories-backup/cli/releases" target="_blank" rel="noreferrer noopener">
+          <a href="https://github.com/TCM2614/snap-memories-web/releases/tag/v1.0.0" target="_blank" rel="noreferrer noopener">
             <Button
               variant="outline"
               className="w-full md:w-auto"
