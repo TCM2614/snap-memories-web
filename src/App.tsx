@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { Cta } from "./components/Cta";
 import { FAQ } from "./components/FAQ";
 import { Features } from "./components/Features";
@@ -34,6 +35,7 @@ function App() {
         <Success />
         <Footer />
         <ScrollToTop />
+        <Analytics />
       </>
     );
   }
@@ -49,6 +51,7 @@ function App() {
       <FAQ />
       <Footer />
       <ScrollToTop />
+      <Analytics />
     </>
   );
 }
