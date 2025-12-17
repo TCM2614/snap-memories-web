@@ -28,9 +28,22 @@ REM 3) Reveal
 set "NSIS_DIR=%cd%\src-tauri\target\release\bundle\nsis"
 if exist "%NSIS_DIR%" (
   echo.
-  echo Build succeeded. Opening output folder:
-  echo %NSIS_DIR%
-  explorer "%NSIS_DIR%"
+  set "SETUP_EXE="
+  for /f "delims=" %%F in ('dir /b /a-d /o-d "%NSIS_DIR%\*-setup.exe" 2^>nul') do (
+    set "SETUP_EXE=%NSIS_DIR%\%%F"
+    goto :haveSetupExe
+  )
+
+  :haveSetupExe
+  if defined SETUP_EXE (
+    echo Build succeeded. Revealing installer:
+    echo %SETUP_EXE%
+    explorer /select,"%SETUP_EXE%"
+  ) else (
+    echo Build succeeded. Opening output folder:
+    echo %NSIS_DIR%
+    explorer "%NSIS_DIR%"
+  )
 ) else (
   echo.
   echo Build succeeded, but expected output folder was not found:
